@@ -1,18 +1,18 @@
 # Database
 ![Alt text](./database.png)
-# API URL
-http://35.166.142.1:1337
+# API URL<br/>
+http://35.166.142.1:1337<br/>
 
-#Rutas API
+#Rutas API<br/>
 Authenticacion:
--POST /login
-  {
-    username:string
-    password:string
-  }
--GET /logout
+-POST /login<br/>
+  {<br/>
+    username:string<br/>
+    password:string<br/>
+  }<br/>
+-GET /logout<br/>
 
-Clientes:
-Productos:
-Invoice
+Clientes:<br/>
+Productos:<br/>
+Invoice<br/>
 
