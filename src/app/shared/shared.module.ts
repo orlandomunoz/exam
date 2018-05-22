@@ -18,6 +18,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 
@@ -52,6 +53,7 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         TabsModule.forRoot(),
         TimepickerModule.forRoot(),
         TooltipModule.forRoot(),
+        PopoverModule.forRoot(),
         TypeaheadModule.forRoot(),
         ToasterModule
     ],
@@ -88,6 +90,7 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         TabsModule,
         TimepickerModule,
         TooltipModule,
+        PopoverModule,
         TypeaheadModule,
         ToasterModule,
         FlotDirective,

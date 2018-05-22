@@ -1,10 +1,10 @@
-import { OnInit, Directive, Input, ElementRef } from '@angular/core';
+import { OnInit, Directive, Input, ElementRef, OnDestroy } from '@angular/core';
 declare var $: any;
 
 @Directive({
     selector: '[vectormap]'
 })
-export class VectormapDirective implements OnInit {
+export class VectormapDirective implements OnInit, OnDestroy {
 
     @Input() mapHeight: number;
     @Input() mapName: any;
@@ -21,7 +21,7 @@ export class VectormapDirective implements OnInit {
         this.$element = $(this.element.nativeElement);
         this.$element.css('height', this.mapHeight);
 
-        if (!this.$element.vectorMap) {
+        if (!this.$element.length || !this.$element.vectorMap) {
             return;
         }
 
@@ -69,6 +69,10 @@ export class VectormapDirective implements OnInit {
                 }]
             },
         });
+    }
+
+    ngOnDestroy() {
+        this.$element.vectorMap('get', 'mapObject').remove();
     }
 
 }

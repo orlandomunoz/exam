@@ -1,7 +1,7 @@
 #Database
 ![Alt text](./database.png)
 #API URL<br/>
-http://35.166.142.1:1337<br/>
+http://34.219.70.161:1337<br/>
 
 #Rutas API<br/>
 Authenticacion:
@@ -15,4 +15,3 @@ Authenticacion:
 Clientes:<br/>
 Productos:<br/>
 Invoice<br/>
-
