@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div class="block-center mt-xl wd-xl">
+    <!-- START panel-->
+    <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center">
+        <a href="#">
+          <img class="block-center img-rounded" src="assets/img/logo.png" alt="Image" />
+        </a>
+      </div>
+      <div class="panel-body">
+        <p class="text-center pv">SIGN IN TO CONTINUE</p>
+        <div class="alert alert-danger text-center" *ngIf="error"> {{ error }} </div>
+        <form [formGroup]="valForm" class="form-validate mb-lg" role="form" name="loginForm" novalidate="" (submit)="submitForm($event, valForm.value)">
+          <div class="form-group has-feedback">
+            <input class="form-control" type="text" name="username" placeholder="Username" autocomplete="off" formControlName="username" required="" />
+            <span class="fa fa-user form-control-feedback text-muted"></span>
+            <span class="text-danger" *ngIf="valForm.controls['username'].hasError('required') && (valForm.controls['username'].dirty || valForm.controls['username'].touched)">
+              This field is required
+            </span>
+          </div>
+          <div class="form-group has-feedback">
+            <input class="form-control" type="password" name="password" placeholder="Password" formControlName="password" required="" />
+            <span class="fa fa-lock form-control-feedback text-muted"></span>
+            <span class="text-danger" *ngIf="valForm.controls['password'].hasError('required') && (valForm.controls['password'].dirty || valForm.controls['password'].touched)">
+              This field is required
+            </span>
+          </div>
+          <button class="btn btn-block btn-primary mt-lg" type="submit" [disabled]="loading">
+            <span *ngIf="!loading">Login</span>
+            <em *ngIf="loading" class="fa fa-circle-o-notch fa-spin"></em>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

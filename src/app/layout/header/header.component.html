@@ -25,6 +25,7 @@
                 <a class="visible-xs sidebar-toggle" (click)="settings.layout.asideToggled =! settings.layout.asideToggled; $event.stopPropagation()">
                     <em class="fa fa-navicon"></em>
                 </a>
+
             </li>
             <!-- START User avatar toggle-->
             <li>
@@ -33,6 +34,7 @@
                     <em class="icon-user"></em>
                 </a>
             </li>
+
             <!-- END User avatar toggle-->
             <!-- START lock screen-->
             <li>
@@ -41,6 +43,11 @@
                 </a>
             </li>
             <!-- END lock screen-->
+            <li>
+                <a (click)="logout()">
+                  <em class="fa fa-sign-out"></em>
+                </a>
+            </li>
         </ul>
         <!-- END Left navbar-->
         <!-- START Right Navbar-->
@@ -129,6 +136,8 @@
                 </a>
             </li>
             <!-- END Offsidebar menu-->
+
+
         </ul>
         <!-- END Right Navbar-->
     </div>

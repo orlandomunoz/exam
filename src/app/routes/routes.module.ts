@@ -6,13 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 
 import { menu } from './menu';
 import { routes } from './routes';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
     imports: [
         SharedModule,
         RouterModule.forRoot(routes)
     ],
-    declarations: [],
+    declarations: [LoginComponent],
     exports: [
         RouterModule
     ]
